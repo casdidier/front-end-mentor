@@ -1,0 +1,71 @@
+:root {
+  --dark_cyan: hsl(185, 75%, 39%);
+  --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+  --dark_grayish_blue: hsl(227, 10%, 46%);
+
+  --dark_gray: hsl(0, 0%, 59%);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  background-color: var(--dark_cyan);
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+main.card {
+  text-align: center;
+  justify-content: center;
+  width: 320px;
+  background: whitesmoke url("./images/bg-pattern-card.svg") repeat-x;
+  border-radius: 12px;
+  padding: 5px;
+  padding-top: 80px;
+}
+
+h1.main-text {
+  font-size: 18px;
+  color: var(--very_dark_desaturated_blue);
+}
+
+h1 span.age {
+  font-weight: 400;
+  color: var(--dark_grayish_blue);
+}
+
+h1 span.description {
+  font-weight: 400;
+  color: var(--dark_gray);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+h2.city {
+  color: var(--dark_grayish_blue);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+img.avatar {
+  border: 6px solid whitesmoke;
+  border-radius: 50%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid rgb(233, 233, 233);
+  padding: 10px 0;
+  margin-top: 25px;
+}
+
+.stats h1 span.description {
+  margin-top: 5px;
+  display: block;
+}
