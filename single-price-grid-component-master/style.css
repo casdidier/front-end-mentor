@@ -1,0 +1,353 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END OF IMPORT RESET CSS */
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 54%, 55%);
+  --bright_yellow: hsl(71, 73%, 54%);
+  --light_gray: hsl(204, 43%, 93%);
+  --grayish_blue: hsl(218, 22%, 67%);
+  --font-family: "Roboto", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  font-size: 16px;
+}
+/*
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2,
+h3,
+a,
+.dollars {
+  font-weight: 700;
+}
+
+.main-container {
+  margin-top: auto;
+  max-width: 66rem;
+  box-shadow: 0 7px 14px rgba(95, 95, 95, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-color: white;
+  padding: 4rem;
+}
+
+.headline {
+  margin-bottom: 2.4rem;
+  color: hsla(179, 62%, 43%);
+  font-size: 2.4rem;
+}
+
+.sub-headline {
+  margin-bottom: 1.6rem;
+  color: hsl(71, 73%, 54%);
+  font-size: 1.8rem;
+}
+
+.hero-text {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.6;
+}
+
+.sub-container {
+  display: flex;
+}
+
+.monthly {
+  flex-basis: 50%;
+  background-color: hsl(179, 62%, 43%);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.monthly-headline,
+.why-us-headline {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.price {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.dollars {
+  font-size: 3.2rem;
+}
+
+.per-month {
+  padding-left: 1.6rem;
+  color: rgb(133, 214, 213);
+}
+
+.monthly-text {
+  margin-bottom: 3.2rem;
+}
+
+.btn {
+  display: inline-block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: hsl(71, 73%, 54%);
+  padding: 1.6rem;
+  text-align: center;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  box-shadow: none;
+  background-color: hsla(71, 73%, 54%, 0.9);
+}
+
+.why-us {
+  flex-basis: 50%;
+  background-color: hsla(179, 62%, 43%, 0.8);
+  padding: 4rem;
+}
+
+.list {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.list li {
+  margin-bottom: 0.4rem;
+}
+
+.attribution {
+  margin-top: auto;
+  padding: 1.1rem;
+  color: hsl(218, 22%, 67%);
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(179, 62%, 43%);
+}
+
+@media (max-width: 800px) {
+  .main-container {
+    max-width: 30rem;
+    margin: 7rem 0;
+  }
+
+  .hero {
+    padding: 2.4rem;
+  }
+
+  .headline {
+    font-size: 1.9rem;
+  }
+
+  .sub-headline {
+    font-size: 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.3rem;
+  }
+
+  .sub-container {
+    flex-direction: column;
+  }
+
+  .monthly,
+  .why-us {
+    padding: 2.4rem;
+  }
+
+  .monthly-headline,
+  .why-us-headline {
+    font-size: 1.7rem;
+  }
+
+  .monthly-text {
+    margin-bottom: 2.8rem;
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 1.4rem;
+  }
+
+  .list {
+    font-size: 1.3rem;
+  }
+}
