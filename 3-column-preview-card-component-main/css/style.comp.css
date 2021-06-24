@@ -1,0 +1,147 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.card {
+  padding: 4.35rem;
+  color: #fff;
+}
+.card .car-icon {
+  width: 6rem;
+  height: 3.75rem;
+}
+.card.sedans {
+  border-radius: 1rem 1rem 0 0;
+  background-color: #e38826;
+}
+.card.sedans .btn-lm {
+  color: #e38826;
+}
+.card.sedans .btn-lm:hover {
+  background-color: #e38826;
+}
+.card.suvs {
+  background-color: #006970;
+}
+.card.suvs .btn-lm {
+  color: #006970;
+}
+.card.suvs .btn-lm:hover {
+  background-color: #006970;
+}
+.card.luxury {
+  border-radius: 0 0 1rem 1rem;
+  background-color: #004241;
+}
+.card.luxury .btn-lm {
+  color: #004241;
+}
+.card.luxury .btn-lm:hover {
+  background-color: #004241;
+}
+.card .card-title {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.card .card-detail {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  padding: 1rem 0rem;
+}
+.card .btn-lm {
+  font-family: "Lexend Deca", sans-serif;
+  border-radius: 3rem;
+  border: 1px solid currentColor;
+  width: 12rem;
+  padding: 1.2rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.card .btn-lm:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media (min-width: 740px) {
+  .container {
+    flex-direction: row;
+    max-width: 680px;
+    margin: 10rem auto;
+    min-height: 500px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card.sedans,
+  .card.suvs,
+  .card.luxury {
+    border-radius: 0;
+  }
+  .card.sedans {
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+  .card.luxury {
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+  .card .card-detail {
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    flex-direction: row;
+    max-width: 920px;
+    margin: 10rem auto;
+    min-height: 500px;
+  }
+  .card {
+    padding: 4.75rem;
+  }
+  .card .card-title {
+    font-size: 3.75rem;
+    padding: 3.5rem 0rem 2.5rem 0rem;
+  }
+  .card .btn-lm {
+    font-size: 1.5rem;
+    width: 15rem;
+    padding: 1.5rem;
+    margin: 0rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
