@@ -1,0 +1,149 @@
+/* (main background)) */
+/* (card background) */
+/* (accent) */
+/* (main heading, stats) */
+/* (main paragraph) */
+/* (stat headings) */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: #090b1a;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+body #card {
+  background-color: #1b1938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1020px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+body #card .image {
+  background-image: url("../images/image-header-desktop.jpg");
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+body #card .image .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(97, 0, 158, 0.5);
+}
+
+body #card main {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 50%;
+  padding: 3rem 5rem;
+}
+
+body #card main h1 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 8%;
+  font-family: "Inter", sans-serif;
+}
+
+body #card main h1 span {
+  color: #aa5cdb;
+}
+
+body #card main p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8rem;
+  margin-bottom: 15%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body #card main .stats {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #card main .stats li {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+body #card main .stats li h2 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+}
+
+body #card main .stats li span {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  display: block;
+}
+
+@media (max-width: 375px) {
+  body #card {
+    display: block;
+    width: 86vw;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin: 100px auto;
+  }
+  body #card .image {
+    background-image: url("../images/image-header-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 30px;
+  }
+  body #card main {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 2rem 0 0;
+  }
+  body #card main h1 {
+    color: white;
+    font-weight: 700;
+    padding: 0 8%;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+  }
+  body #card main h1 span {
+    color: #aa5cdb;
+  }
+  body #card main p {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8rem;
+    padding: 0 7%;
+    margin-bottom: 40px;
+    font-family: "Lexend Deca", sans-serif;
+  }
+  body #card main .stats {
+    list-style: none;
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

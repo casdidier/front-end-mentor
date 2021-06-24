@@ -1,0 +1,154 @@
+// primary color
+$Very-dark-blue: hsl(233, 47%, 7%); /* (main background)) */
+$Dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
+$Soft-violet: hsl(277, 64%, 61%); /* (accent) */
+
+// neutral color
+$White: hsl(0, 0%, 100%); /* (main heading, stats) */
+$Slightly-paragraph: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+$Slightly-heading: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: $Very-dark-blue;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  // function space
+
+  #card {
+    background-color: $Dark-desaturated-blue;
+    display: flex;
+    width: 1020px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .image {
+      background-image: url("../images/image-header-desktop.jpg");
+      order: 2;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 100%;
+      margin-bottom: 30px;
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(97, 0, 158, 0.5);
+        // filter: opacity();
+      }
+    }
+
+    main {
+      order: 1;
+      width: 50%;
+      padding: 3rem 5rem;
+
+      h1 {
+        color: $White;
+        font-weight: 700;
+        margin-bottom: 8%;
+        font-family: "Inter", sans-serif;
+
+        span {
+          color: $Soft-violet;
+        }
+      }
+
+      p {
+        color: $Slightly-paragraph;
+        line-height: 1.8rem;
+        margin-bottom: 15%;
+        font-family: "Lexend Deca", sans-serif;
+      }
+
+      .stats {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          margin-bottom: 40px;
+          text-transform: uppercase;
+
+          h2 {
+            color: $White;
+            font-family: "Inter", sans-serif;
+            margin-bottom: 10px;
+          }
+
+          span {
+            color: $Slightly-heading;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    // function
+    @mixin space($p, $mb, $font) {
+      padding: 0 $p;
+      margin-bottom: $mb;
+      font-family: $font, sans-serif;
+    }
+
+    #card {
+      display: block;
+      width: 86vw;
+      height: auto;
+      padding-bottom: 1.5rem;
+      margin: 100px auto;
+
+      .image {
+        background-image: url("../images/image-header-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+        margin-bottom: 30px;
+      }
+
+      main {
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 2rem 0 0;
+        h1 {
+          color: $White;
+          font-weight: 700;
+          @include space(8%, 20px, "Inter");
+
+          span {
+            color: $Soft-violet;
+          }
+        }
+
+        p {
+          color: $Slightly-paragraph;
+          line-height: 1.8rem;
+          @include space(7%, 40px, "Lexend Deca");
+        }
+
+        .stats {
+          list-style: none;
+          display: block;
+        }
+      }
+    }
+  }
+}
