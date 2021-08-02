@@ -1,0 +1,134 @@
+:root {
+  /*   color variables */
+  --clr-primary: #29e6a7;
+  --clr-primary-hover: #18c98e;
+  --clr-primary-light: #91f2d2;
+  --clr-accent100: #4dd0e1;
+  --clr-accent200: #651fff;
+  --clr-accent300: #2979ff;
+  --clr-accent400: #00b8d4;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+
+  /*   border radius */
+  --radius: 10rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__wrapper {
+  position: relative;
+}
+
+#btn {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: inherit;
+  text-align: center;
+  color: white;
+  padding: 2rem 3rem;
+  outline: none;
+  border-radius: var(--radius);
+  border: 8px solid var(--clr-primary);
+  background-color: var(--clr-primary);
+  transition: background-color 250ms ease-in, border 250ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    border: 8px solid var(--clr-primary-hover);
+    background-color: var(--clr-primary-hover);
+  }
+}
+
+#check {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--clr-primary-hover);
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  opacity: 0;
+  z-index: -1;
+}
+
+.btnAnimation {
+  animation: animate 4s ease-in forwards;
+}
+
+.checkAnimation {
+  animation: animateCheck 4s ease-in forwards;
+}
+
+@keyframes animate {
+  0% {
+    color: transparent;
+    width: 16rem;
+  }
+  5% {
+    width: 8rem;
+    border-radius: 10rem;
+    border: 8px solid var(--clr-accent100);
+    background-color: var(--clr-accent100);
+  }
+  25% {
+    border: 8px solid var(--clr-accent200);
+    background-color: var(--clr-accent200);
+  }
+  55% {
+    border: 8px solid var(--clr-accent300);
+    background-color: var(--clr-accent300);
+  }
+  75% {
+    border: 8px solid var(--clr-accent400);
+    background-color: var(--clr-accent400);
+  }
+  82% {
+    border: 8px solid var(--clr-primary);
+    background-color: var(--clr-primary);
+  }
+
+  88% {
+    background-color: transparent;
+  }
+
+  100% {
+    border-radius: 10rem;
+    color: transparent;
+    width: 8rem;
+    background-color: transparent;
+    border: 8px solid var(--clr-primary-hover);
+  }
+}
+
+@keyframes animateCheck {
+  90% {
+    display: block;
+    transform: scale(1);
+    opacity: 0;
+  }
+  95% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
