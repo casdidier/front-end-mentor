@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <title>Splitter</title>
+    <div class="container">
+      <div class="selection-container">
+        <div class="bill">
+          <p>Bill</p>
+          <input type="text" placeholder="$" />
+        </div>
+        <div class="select-tip">Select Tip % 5% 10% 15% 25% 50% Custom</div>
+        <div class="number-people">
+          <p>Number of people</p>
+          <input type="text" placeholder="0" />
+        </div>
+      </div>
+      <div class="display-container">
+        <div class="tip-amount">
+          <div class="tip-amount-label">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <div class="price">$0.00</div>
+        </div>
+        <div class="tip-amount-per-person">
+          <div class="tip-amount-per-person-label">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <div class="price">$0.00</div>
+        </div>
+        <button>RESET</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Didier</a>.
+    </div>
+  </body>
+</html>
