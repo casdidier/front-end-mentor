@@ -29,6 +29,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script type="text/javascript" src="./index.js"></script>
   </head>
   <body>
     <div class="container">
@@ -39,7 +40,7 @@
       <div class="card">
         <div class="top-card">
           <div class="pageviews">100K Pageviews</div>
-          <div class="price">$16 /month</div>
+          <div class="price" id="priceTag">$16 /month</div>
         </div>
         <div class="slidecontainer">
           <input
@@ -49,6 +50,7 @@
             value="50"
             class="gauge"
             id="myRange"
+            onchange="showVal()"
           />
         </div>
         <div class="additional-info">
