@@ -1,89 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
     <title>Frontend Mentor | Interactive pricing component</title>
+</head>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <script type="text/javascript" src="./index.js"></script>
-  </head>
-  <body>
+<body class="body">
     <div class="container">
-      <div class="title">Simple, traffic-based pricing</div>
-      <div class="subtitle">
-        Sign-up for our 30-day trial. No credit card required.
-      </div>
-      <div class="card">
-        <div class="top-card">
-          <div class="pageviews">100K Pageviews</div>
-          <div class="price" id="priceTag">$16 /month</div>
-        </div>
-        <div class="slidecontainer">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            class="gauge"
-            id="myRange"
-            onchange="showVal()"
-          />
-        </div>
-        <div class="additional-info">
-          <div class="container">
-            <div class="billing-switch">
-              <div>Monthly Billing</div>
-              <label class="switch">
-                <input type="checkbox" />
-                <span class="slider round"></span>
-              </label>
-              <div>Yearly Billing</div>
-              <span class="tag">25% discount</span>
-            </div>
-          </div>
-        </div>
-        <div class="low-card">
-          <div class="content">
-            <ul>
-              <li>Unlimited websites</li>
-              <li>100% data ownership</li>
-              <li>Email reports</li>
-            </ul>
-          </div>
-          <button class="btn btn-confirm">Start my trial</button>
-        </div>
-      </div>
-    </div>
+        <header class="header">
+            <h2 class="u-h2">
+                Simple, traffic-based pricing</h2>
+            <p class="u-p">Sign-up for our 30-day trial.<br> No credit card required. </p>
+        </header>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+        <div class="card">
+            <p class="card-p" id="card-p"></p>
+            <div class="card-selector"><input type="range" name="slider" id="slider" class="slider" value="1" min="1" max="5" step="1"></div>
+            <p class="card-price"><span class="card-value" id="card-value">hola</span><span class="card-time" id="card-time">/month</span></p>
+            <div class="card-timeselector">
+                <input type="checkbox" name="price-toggle" id="price-toogle" class="checkbox" checked>
+                <p>Monthly Billing</p>
+                <label for="price-toogle" class="price-toggle"></label>
+                <p>Yearly Billing <span class="percentage">25%<span class="discount"> discount</span></span>
+                </p>
+            </div>
+            <hr class="card-line">
+            <div class="card-characteristics">
+                <ul>
+                    <li><i class="check"><img src="./static/images/icon-check.svg" alt=""></i>Unlimited websites</li>
+                    <li><i class="check"><img src="./static/images/icon-check.svg" alt=""></i>100% data ownership</li>
+                    <li><i class="check"><img src="./static/images/icon-check.svg" alt=""></i>Email reports</li>
+                </ul>
+            </div>
+            <button class="card-button">Start my trial</button>
+        </div>
     </div>
-  </body>
+    <footer class="footer">
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/casdidier">casdidier</a>.
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
 </html>
